@@ -14,12 +14,34 @@ function readMore() {
         more.style.display = "inline";
     }
 }
+// <!-- заховати два lifestyle__block з 560px і відкрити функціею -->
 
+// function moreProduct() {
+//     let dots = document.getElementById('dots');
+//     let more = document.getElementById('more');
+//     let btn = document.getElementById('btn1');
+
+//     if (dots.style.display === "none") {
+//         dots.style.display = "inline";
+//         btn.innerHTML = "Read the full Story";
+//         more.style.display = "none";
+//     } else {
+//         dots.style.display = "none";Ò
+//         btn.innerHTML = "Read Less";
+//         more.style.display = "inline";
+//     }
+// }
+
+//доробити burger menu!!!!!!!!!!!
+//сховати блок PRODUCTS при розшиненні 560px ()
+
+
+// <!-- заховати два lifestyle__block з 560px і відкрити функціею -->
 //PRODUCTS DATABASE 
 const db = [
     {
         id: 0,
-        img: "images/coffeFlowers1.png",
+        img: "images/Pink.png",
         name: "Pink Premium Ceramic",
         description: "Классический рецепт: ,  Черный кофе (эспрессо или другой) – 30-50 мл,  Сливки (жирность 10-15%) – 100 мл,  Сахар – 5 грамм,  Ванильный сахар – 5 грамм,  Перец Чили,  Тертый шоколад – по вкусу (для украшения),",
         price: "$ 99.00",
@@ -28,7 +50,7 @@ const db = [
     },
     {
         id: 1,
-        img: "images/GoldenDes2.png",
+        img: "images/Golden.png",
         name: "Golden Designers Mug",
         description: "Классический рецепт: ,  Черный кофе (эспрессо или другой) – 30-50 мл,  Сливки (жирность 10-15%) – 100 мл,  Сахар – 5 грамм,  Ванильный сахар – 5 грамм,  Перец Чили,  Тертый шоколад – по вкусу (для украшения),",
         price: "$ 50.00",
@@ -137,12 +159,12 @@ function createCupElement(itemData, isFeatured) {
 
     let image = document.createElement("img");
     if (isFeatured) {
-        image.setAttribute("id", "featured__images img");
+        image.setAttribute("class", "featured__img ");
     } else {
-        image.setAttribute("id", "product__images img");
+        image.setAttribute("class", "product__img ");
     }
-    image.className = "itemImage";
 
+    image.className = 'itemImage';
     image.src = `${itemData.img}`;
     item.appendChild(image);
 
@@ -180,7 +202,6 @@ function createCupElement(itemData, isFeatured) {
     button.className = "buyItemBtn";
     button.innerHTML = "Add to cart";
     button.onclick = () => {
-        console.log(`item clicked: ${itemData.name}`);
         addToBucket(itemData);
         updateBucketLabel();
     };
@@ -199,7 +220,6 @@ function createCupElement(itemData, isFeatured) {
     item.onmouseover = onItemOver;
     item.onmouseleave = onItemOut;
 
-    // console.log(`item created for ${itemData.name} = ${item.innerHTML}`);
     return item;
 }
 
@@ -212,7 +232,6 @@ function onItemOver(event) {
 
         let parent = event.target.parentNode;
         if (parent === undefined) {
-            console.log("Can't find parent for " + target);
             return;
         }
 
@@ -220,7 +239,6 @@ function onItemOver(event) {
 
         if (container != null) {
             container.style.opacity = 1;
-            console.log("over " + target);
         }
     }
 }
@@ -228,12 +246,10 @@ function onItemOver(event) {
 create opacity block for coffee card
 */
 function onItemOut(event) {
-    console.log("try leave");
     let container = event.target.querySelector(".hiddenContainer");
     if (container == null) {
         let parent = event.target.parentNode;
         if (parent == undefined) {
-            console.log("Can't find parent for " + event.target.className);
             return;
         }
         container = parent.querySelector(".hiddenContainer");
@@ -241,7 +257,6 @@ function onItemOut(event) {
 
     if (container != null && container.style.opacity > 0) {
         container.style.opacity = 0;
-        console.log("hidden");
     } else {
         console.log("container not found for " + parent.className);
     }
@@ -301,7 +316,6 @@ function showBucket() {
     let totalAmount = 0;
     if (Object.keys(bucket).length > 0) {
         for (let key in bucket) {
-            console.log(`[${key}] = ${bucket[key]}`);
             let itemData = db.find((el) => key == el.id);
             if (itemData === undefined) {
                 console.log("ERROR for key:" + key);
@@ -381,7 +395,6 @@ function addPrice(price, add) {
 }
 
 function repaintBucket() {
-    console.log("REPAINT BUCKET");
     let parent = document.querySelector(".myTable").parentNode;
     parent.removeChild(document.querySelector(".myTable"));
     parent.removeChild(document.querySelector(".popup__fullprice"));
@@ -419,7 +432,6 @@ closeButton.onclick = () => onClose();
 
 
 function onClose() {
-    console.log("TRY CLOSE ");
     popup.style.display = "none";
     let parent = document.querySelector(".myTable").parentNode;
     parent.removeChild(document.querySelector(".myTable"));
