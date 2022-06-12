@@ -1,2 +1,2 @@
-# CoffeStyle
+# CoffeeStyle
 

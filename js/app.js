@@ -1,3 +1,36 @@
+//function showMenu
+const showBurgerMenu = document.querySelector('.header__burger');
+const menuList = document.querySelector('.header__navigator');
+if (showBurgerMenu) {
+    showBurgerMenu.addEventListener("click", function (e) {
+        document.body.classList.toggle('_lock');
+        showBurgerMenu.classList.toggle('_active');
+        menuList.classList.toggle('_active');
+    });
+}
+//function for daley scroll to section from burger
+const menuLinks = document.querySelectorAll('.header__list');
+if (menuLinks.length < 0) {
+    menuLinks.forEach(menuLink => {
+        menuLink.addEventListener("click", clickOnBurgerMenu);
+
+    });
+    function clickOnBurgerMenu(e) {
+        if (showBurgerMenu.classList('_active')) {
+            document.body.classList.remove('_lock');
+            showBurgerMenu.classList.remove('_active');
+            menuList.classList.remove('_active');
+        }
+
+        // window.scrollTo({
+        //     top: '30px',
+        //     behavior: "smooth"
+        // });
+        e.preventDefault();
+    }
+
+}
+
 //FUNCTION FOR ADD MORE INFO
 function readMore() {
     let dots = document.getElementById('dots');
@@ -14,29 +47,18 @@ function readMore() {
         more.style.display = "inline";
     }
 }
-// <!-- заховати два lifestyle__block з 560px і відкрити функціею -->
+// <!-- заховати product block з 560px і відкрити функціею toggleSeeMore() -->
+function toggleSeeMore() {
+    if (document.querySelector(".products__row").style.display === 'none') {
+        document.querySelector(".products__row").style.display = 'flex';
+        document.getElementById("btn2").innerHTML = 'Close';
+    }
+    else {
+        document.querySelector(".products__row").style.display = "none";
+        document.getElementById("btn2").innerHTML = 'Show products';
+    }
+}
 
-// function moreProduct() {
-//     let dots = document.getElementById('dots');
-//     let more = document.getElementById('more');
-//     let btn = document.getElementById('btn1');
-
-//     if (dots.style.display === "none") {
-//         dots.style.display = "inline";
-//         btn.innerHTML = "Read the full Story";
-//         more.style.display = "none";
-//     } else {
-//         dots.style.display = "none";Ò
-//         btn.innerHTML = "Read Less";
-//         more.style.display = "inline";
-//     }
-// }
-
-//доробити burger menu!!!!!!!!!!!
-//сховати блок PRODUCTS при розшиненні 560px ()
-
-
-// <!-- заховати два lifestyle__block з 560px і відкрити функціею -->
 //PRODUCTS DATABASE 
 const db = [
     {
@@ -151,9 +173,9 @@ create card block
 function createCupElement(itemData, isFeatured) {
     let item = document.createElement("div");
     if (isFeatured) {
-        item.setAttribute("id", "featured__images");
+        item.setAttribute("class", "featured__images");
     } else {
-        item.setAttribute("id", "product__images");
+        item.setAttribute("class", "product__images");
     }
 
 

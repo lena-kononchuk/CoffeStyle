@@ -4,7 +4,7 @@
 <head>
     <link rel="stylesheet" href="css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CoffeStyle</title>
+    <title>CoffeeStyle</title>
 </head>
 
 <body>
@@ -18,11 +18,11 @@
                     <nav class="header__navigator">
                         <ul class="header__list">
                             <li><a href="#">Home</a></li>
-                            <li><a href="#Products">Our Products</a></li>
+                            <li><a href="#">Our Products</a></li>
                             <li><a href="#Blog">Blog</a></li>
                             <li><a href="#About">About</a></li>
-                            <li><a href="#Contacts">Contacts</a></li>
-                            <li><a href="#Style">Styleguide</a></li>
+                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#">Styleguide</a></li>
                         </ul>
                     </nav>
 
@@ -69,6 +69,7 @@
                             unorthographic life One day however a small line of blind text by the name of Lorem Ipsum
                             decided to leave for the far World of Grammar <span id="dots">...</span>
                             <span id="more" style="display: none">
+
                                 It is a paradisematic country, in which roasted parts of sentences fly
                                 into
                                 your mouth. Even the all-powerful Pointing has no control about the blind texts it is an
@@ -100,7 +101,13 @@
             <div class="products" id="Products">
                 <div class="products__container">
                     <div class="products__title title">More Products</div>
+                    <div class="products__button">
+                        <button type="button" class="blog__btn" id="btn2" onclick="toggleSeeMore()">Show
+                            products</button>
+                        <div class="blog__separator"></div>
+                    </div>
                     <div class="products__row">
+
                     </div>
                 </div>
             </div>
@@ -149,32 +156,32 @@
 
                         <!-- заховати два lifestyle__block з 560px і відкрити функціею -->
 
-                        <span id="moreInfo">
-                            <div class="lifestyle__block">
-                                <img src="images/design2.png" alt="lifestyle">
-                                <div class="lifestyle__info">
-                                    <div class="lifestyle__subtitle">How long does a cup of coffee keep you awake?</div>
-                                    <div class="lifestyle__text">It is a paradisematic country, in which roasted parts.
-                                        Vel
-                                        qui et ad voluptatem.
-                                    </div>
-                                    <span class="lifestyle__date">October 9, 2018</span>
+                        <!-- <span id="moreInfo"> -->
+                        <div class="lifestyle__block">
+                            <img src="images/design2.png" alt="lifestyle">
+                            <div class="lifestyle__info">
+                                <div class="lifestyle__subtitle">How long does a cup of coffee keep you awake?</div>
+                                <div class="lifestyle__text">It is a paradisematic country, in which roasted parts.
+                                    Vel
+                                    qui et ad voluptatem.
                                 </div>
+                                <span class="lifestyle__date">October 9, 2018</span>
                             </div>
-                            <div class="lifestyle__block">
-                                <img src="images/design3.png" alt="lifestyle">
-                                <div class="lifestyle__info">
-                                    <div class="lifestyle__subtitle">Recent research suggests that heavy coffee drinkers
-                                        may
-                                        reap health benefits.</div>
-                                    <div class="lifestyle__text">It is a paradisematic country, in which roasted parts
-                                        of
-                                        sentences fly into your mouth.
-                                    </div>
-                                    <span class="lifestyle__date">October 9, 2018</span>
+                        </div>
+                        <div class="lifestyle__block">
+                            <img src="images/design3.png" alt="lifestyle">
+                            <div class="lifestyle__info">
+                                <div class="lifestyle__subtitle">Recent research suggests that heavy coffee drinkers
+                                    may
+                                    reap health benefits.</div>
+                                <div class="lifestyle__text">It is a paradisematic country, in which roasted parts
+                                    of
+                                    sentences fly into your mouth.
                                 </div>
+                                <span class="lifestyle__date">October 9, 2018</span>
                             </div>
-                        </span>
+                        </div>
+                        <!-- </span> -->
 
                         <!-- заховати два lifestyle__block з 560px і відкрити функціею -->
 
@@ -187,8 +194,10 @@
                         <div class="updates__subtitle">Sign up and get free coffee bags</div>
                         <div class="updates__title">Coffee Updates</div>
                         <form action="#" class="updates__form">
-                            <input class="updates__input" type="email" name="email"
-                                placeholder="customer@coffeestyle.io">
+                            <label>
+                                <input class="updates__input" type="email" name="email"
+                                    placeholder="customer@coffeestyle.io" />
+                            </label>
                             <button class="updates__btn">subscribe</button>
                         </form>
                     </div>
@@ -208,11 +217,11 @@
                         <div class="footer__title">menu</div>
                         <ul class="footer__list">
                             <li><a href="#">Home</a></li>
-                            <li><a href="#OurProducts">Our Products</a></li>
+                            <li><a href="#Products">Our Products</a></li>
                             <li><a href="#Blog">Blog</a></li>
                             <li><a href="#About">About</a></li>
                             <li><a href="#Contacts">Contacts</a></li>
-                            <li><a href="#Styleguide">Styleguide</a></li>
+                            <li><a href="#Style">Styleguide</a></li>
                         </ul>
                     </div>
                     <div class="footer__follow">
