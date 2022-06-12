@@ -1,4 +1,4 @@
-//function showMenu
+//function burger showMenu
 const showBurgerMenu = document.querySelector('.header__burger');
 const menuList = document.querySelector('.header__navigator');
 if (showBurgerMenu) {
@@ -8,27 +8,15 @@ if (showBurgerMenu) {
         menuList.classList.toggle('_active');
     });
 }
-//function for daley scroll to section from burger
-const menuLinks = document.querySelectorAll('.header__list');
-if (menuLinks.length < 0) {
-    menuLinks.forEach(menuLink => {
-        menuLink.addEventListener("click", clickOnBurgerMenu);
 
+// close my burger menu here
+let els = document.querySelectorAll('.header__list');
+for( let i = els.length; i--; ) {
+    els[i].addEventListener('click', function () {
+                document.body.classList.remove('_lock');
+                showBurgerMenu.classList.remove('_active');
+                menuList.classList.remove('_active');
     });
-    function clickOnBurgerMenu(e) {
-        if (showBurgerMenu.classList('_active')) {
-            document.body.classList.remove('_lock');
-            showBurgerMenu.classList.remove('_active');
-            menuList.classList.remove('_active');
-        }
-
-        // window.scrollTo({
-        //     top: '30px',
-        //     behavior: "smooth"
-        // });
-        e.preventDefault();
-    }
-
 }
 
 //FUNCTION FOR ADD MORE INFO
@@ -163,9 +151,7 @@ const db = [
 
 ]
 
-
 let bucket = {}; //пустая корзина (ключ-значение)
-
 
 /*
 create card block

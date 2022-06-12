@@ -24,7 +24,7 @@ body {
 }
 
 body {
-  font-family: 'Karla';
+  font-family: 'Karla', sans-serif;
   font-size: 16px;
 }
 
@@ -85,7 +85,7 @@ body._lock {
 }
 
 .header__list a {
-  font-family: "Karla";
+  font-family: "Karla", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -102,7 +102,7 @@ body._lock {
 }
 
 .cart-header__icon {
-  font-family: "Karla";
+  font-family: "Karla", sans-serif;
   color: #1D1F2E;
 }
 
@@ -118,12 +118,12 @@ body._lock {
 
 .header__cartcount {
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 75px;
 }
 
 .header__spantext {
-  font-family: "Karla";
+  font-family: "Karla", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -131,7 +131,7 @@ body._lock {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #1D1F2E;
-  padding: 0px 10px 0px 10px;
+  padding: 0 10px 0 10px;
   background-color: inherit;
 }
 
@@ -149,6 +149,12 @@ body._lock {
 @media screen and (max-width: 991px) {
   .header__list a {
     letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header__logo {
+    margin-right: 10px;
   }
 }
 
@@ -177,7 +183,6 @@ body._lock {
     height: 18px;
     cursor: pointer;
     right: 35px;
-    z-index: 222;
   }
 
   .header__burger span,
@@ -278,6 +283,11 @@ body._lock {
   }
 }
 
+@media only screen and (max-width: 550px) {
+  .header__coll {
+    margin-right: 0;
+  }
+}
 
 @media only screen and (max-width: 500px) {
   .header__item {
@@ -302,7 +312,7 @@ body._lock {
   background-image: url("../images/header_img.png");
   background-repeat: no-repeat;
   background-position: center;
-  font-family: "Karla";
+  font-family: "Karla", sans-serif;
   font-style: normal;
   font-weight: normal;
   color: #FFFFFF;
@@ -331,13 +341,13 @@ body._lock {
   padding-top: 30px;
 }
 
-.content__button {
+.content .content__button {
   text-align: center;
-  padding: 44px 0px 114px 0px;
+  padding: 44px 0 114px 0;
 }
 
 .content__button button {
-  font-family: "Karla";
+  font-family: "Karla", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -355,15 +365,26 @@ body._lock {
   border-radius: 4px;
 }
 
+@media only screen and (max-width: 946px) {
+  .content .content__button {
+    text-align: center;
+    // padding: 44px 0px 84px 0px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
-  .content__text {
-    letter-spacing: 0;
+
+  .content .content__text {
+    letter-spacing: 1px;
+    padding: 0 20px;
+    line-height: 24px;
   }
 }
 
 @media only screen and (max-width: 991px) {
   .content__text {
     padding: 30px 15px 0 15px;
+    letter-spacing: 1px;
   }
 
   .content__button {
@@ -385,6 +406,12 @@ body._lock {
   }
 }
 
+@media only screen and (max-width: 414px) {
+  .content .content__button {
+    padding-bottom: 100px;
+  }
+}
+
 /*----------------------------------------BLOG SECTION STYLE---------------------------------*/
 .blog {
   padding: 127px 0 100px 0;
@@ -393,7 +420,7 @@ body._lock {
 .blog__container {
   max-width: 620px;
   margin: 0 auto;
-  font-family: "Karla";
+  font-family: "Karla", sans-serif;
   font-style: normal;
   font-weight: normal;
   text-align: center;
@@ -422,7 +449,6 @@ body._lock {
   font-size: 15px;
   line-height: 28px;
   color: #A25F4B;
-  padding: 10px;
   background-color: inherit;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -430,7 +456,6 @@ body._lock {
   transition: background-position 0.5s ease, padding-left 0.5s ease;
   width: 200px;
   height: 35px;
-  font-size: 16px;
   padding: 1px 7px 1px 7px;
 }
 
@@ -456,15 +481,11 @@ body._lock {
   .blog__title {
     line-height: 30px;
   }
-
-  .blog__text {
-    line-height: 24px;
-  }
 }
 
 @media only screen and (max-width: 767px) {
-  .blog__text {
-    padding: 0 20px;
+  .blog .blog__text {
+    padding: 30px 15px 0 15px;
   }
 }
 
@@ -482,11 +503,12 @@ body._lock {
   .blog__title {
     font-size: 20px;
     line-height: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 0;
   }
 
   .blog__text {
     line-height: 25px;
+    padding: 0;
   }
 }
 
@@ -497,7 +519,7 @@ body._lock {
 }
 
 .featured__title {
-  padding: 0 0px 100px 0px;
+  padding: 0 0 100px 0;
 }
 
 .featured__images {
@@ -545,7 +567,7 @@ body._lock {
 .descriptionlabel {
   white-space: pre-wrap;
   padding: 10px;
-  font-family: "Karla";
+  font-family: "Karla", serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -597,7 +619,7 @@ body._lock {
 
 .oldPrice {
   text-decoration: line-through;
-  font-family: "Karla";
+  font-family: "Karla", serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -613,7 +635,7 @@ body._lock {
   }
 
   .featured__title {
-    padding: 0 0px 50px 0px;
+    padding: 0 0 50px 0;
   }
 
   .featured__images {
@@ -728,7 +750,7 @@ body._lock {
 
   .featured__images .hiddenContainer {
     width: 100%;
-    bottom: 73px;
+    bottom: 67px;
   }
 
   .nameTitle {
@@ -765,7 +787,7 @@ body._lock {
   position: absolute;
   z-index: 2;
   bottom: 168px;
-  left: 0px;
+  left: 0;
   width: 100%;
   height: auto;
   background: rgba(0, 0, 0, 0.3);
@@ -786,7 +808,6 @@ body._lock {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #1D1F2E;
-  letter-spacing: 2px;
 }
 
 .text {
@@ -805,12 +826,12 @@ body._lock {
 }
 
 .products__title {
-  padding: 80px 0px 100px 0px;
+  padding: 80px 0 100px 0;
 }
 
 @media only screen and (max-width: 991px) {
   .products__title {
-    padding: 20px 0px 50px 0px;
+    padding: 20px 0 50px 0;
   }
 
   .products__row {
@@ -832,7 +853,7 @@ body._lock {
 
 @media screen and (max-width: 767px) {
   .products__title {
-    padding: 0 0 50px 0px;
+    padding: 0 0 50px 0;
   }
 
   .product__images .itemImage {
@@ -862,7 +883,7 @@ body._lock {
   }
 
   .product__images .hiddenContainer {
-    bottom: 107px;
+    bottom: 93px;
   }
 
   .product__images .paretPrice {
@@ -878,7 +899,7 @@ body._lock {
 .offers__row {
   display: flex;
   justify-content: space-between;
-  font-family: "Karla";
+  font-family: "Karla", serif;
   font-style: normal;
   font-weight: normal;
 
@@ -917,7 +938,7 @@ body._lock {
 }
 
 .offers__btn {
-  padding: 30px 0px 10px 0px;
+  padding: 30px 0 10px 0;
 }
 
 .button {
@@ -938,7 +959,7 @@ body._lock {
 }
 
 .background {
-  padding: 130px 0px 100px 0px;
+  padding: 130px 0 100px 0;
 }
 
 .background img {
@@ -1072,7 +1093,7 @@ body._lock {
 
 .lifestyle__row {
   display: flex;
-  font-family: "Karla";
+  font-family: "Karla", serif;
   font-style: normal;
   font-weight: normal;
 }
@@ -1093,7 +1114,7 @@ body._lock {
   font-size: 20px;
   line-height: 32px;
   color: #1D1F2E;
-  padding: 35px 0px 25px 0px;
+  padding: 35px 0 25px 0;
   letter-spacing: 0.5px;
   justify-content: center;
   align-items: center;
@@ -1133,7 +1154,7 @@ body._lock {
 
   .lifestyle__subtitle {
     font-size: 18px;
-    padding: 17px 0px 15px 0px;
+    padding: 17px 0 15px 0;
     line-height: 25px;
   }
 
@@ -1171,7 +1192,7 @@ body._lock {
 
   .lifestyle__subtitle {
     font-size: 18px;
-    padding: 17px 0px 0 0px;
+    padding: 17px 0 0 0;
     margin-bottom: 15px;
     line-height: 22px;
   }
@@ -1222,7 +1243,7 @@ body._lock {
   letter-spacing: 2px;
   color: #FFFFFF;
   padding-top: 83px;
-  font-family: "Karla";
+  font-family: "Karla", serif;
   font-style: normal;
   font-weight: normal;
 }
@@ -1255,13 +1276,13 @@ body._lock {
 }
 
 .updates__form {
-  padding: 0px 0px 85px 0px;
+  padding: 0 0 85px 0;
 }
 
 .updates__btn {
   padding: 20px;
   background: #FFFFFF;
-  box-shadow: 0px 2px 6px rgba(29, 31, 46, 0.1);
+  box-shadow: 0 2px 6px rgba(29, 31, 46, 0.1);
   font-size: 12px;
   line-height: 18px;
   letter-spacing: 2px;
@@ -1297,12 +1318,16 @@ body._lock {
   }
 
   .updates__input {
-    min-width: 300px;
+    min-width: 200px;
 
   }
 
   .updates__btn {
     width: 98%;
+  }
+
+  .updates__title {
+    line-height: 16px;
   }
 }
 
@@ -1310,8 +1335,8 @@ body._lock {
 .footer__row {
   display: flex;
   justify-content: space-between;
-  padding: 105px 0px 15px 0px;
-  font-family: "Karla";
+  padding: 105px 0 15px 0;
+  font-family: "Karla", serif;
   font-style: normal;
   font-weight: normal;
 }
@@ -1320,7 +1345,7 @@ body._lock {
   font-size: 14px;
   line-height: 22px;
   color: rgba(29, 31, 46, 0.7);
-  padding: 35px 0px 90px 0px;
+  padding: 35px 0 90px 0;
   letter-spacing: 0.5px;
   max-width: 280px;
 }
@@ -1467,6 +1492,32 @@ body._lock {
   }
 }
 
+@media only screen and (max-width: 500px) {
+
+  .footer__follow .footer__title,
+  .footer__contact .footer__title {
+    padding-top: 40px;
+  }
+
+  .footer__menu,
+  .footer__follow {
+    border-bottom: 2px solid rgba(162, 95, 75, 0.2);
+  }
+
+  .footer__follow .footer__list {
+    padding-bottom: 0;
+  }
+
+  .footer__menu .footer__list {
+    display: block;
+    padding-bottom: 0;
+  }
+
+  .footer__menu .footer__list li {
+    margin-right: 0;
+  }
+}
+
 @media only screen and (max-width: 414px) {
   .footer {
     margin: 0 10px;
@@ -1476,7 +1527,7 @@ body._lock {
     padding: 50px 0 20px 0;
   }
 
-  .footer__list li {
+  .footer__menu .footer__list li {
     margin-right: 10px;
   }
 
@@ -1508,7 +1559,7 @@ body._lock {
 }
 
 .popup__content {
-  font-family: "Karla";
+  font-family: "Karla", serif;
   font-style: normal;
   font-weight: normal;
   color: #000;
@@ -1519,7 +1570,7 @@ body._lock {
   position: relative;
   transition: all 0.8s ease 0s;
   background-color: #eaeced;
-  width: 600px;
+  min-width: 600px;
 }
 
 .popup__title {
@@ -1527,7 +1578,7 @@ body._lock {
   line-height: 36px;
   color: #1D1F2E;
   letter-spacing: 0.5px;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0 10px 0;
 }
 
 .popup__closed {
@@ -1627,14 +1678,15 @@ table .myTable {
   display: flex;
   padding: 12px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .popup__sum {
-  padding-left: 75px;
+  padding-right: 67px;
 }
 
 .popup__count {
-  padding-left: 292px;
+  padding-left: 375px;
 }
 
 .myTable tbody td:nth-child(2) {
@@ -1667,26 +1719,45 @@ table .myTable {
 .popup__fullprice {
   padding: 15px 0 0 10px;
   display: inline-block;
-  font-family: "Karla";
+  font-family: "Karla", serif;
   font-style: normal;
   font-weight: 700;
   color: #000;
+  display: flex;
+  justify-content: space-between;
 }
 
 .fullprice {
   display: inline-block;
-  padding-left: 394px;
+  padding-right: 30px;
 }
-
-///TO DO
-// adaptation from 767px to 320px
-//burger
-//hover on hiddenConteiner
-
 
 .products__button {
   display: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .popup__content {
+    margin: 0 40px;
+  }
+
+  .popup__body {
+    padding: 30px 20px;
+  }
+
+  .popup__content {
+    min-width: 400px;
+  }
+
+  .popup__count {
+    padding-left: 230px;
+  }
+
+  .popup__sum {
+    padding-right: 34px;
+  }
+}
+
 
 @media only screen and (max-width: 600px) {
   .products {
@@ -1709,13 +1780,52 @@ table .myTable {
   .products__button {
     padding-bottom: 20px;
   }
+}
 
-  // .product__images {
-  //   display: flex;
-  //   flex-direction: column;
-  // }
+@media only screen and (max-width: 685px) {
+  .popup__sum {
+    padding-right: 24px;
+  }
 
-  // .product__images .itemImage {
-  //   justify-content: space-around;
-  // }
+  .popup__count {
+    padding-left: 200px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .popup__sum {
+    padding-right: 4px;
+  }
+
+  .popup__count {
+    padding-left: 92px;
+  }
+
+  .myTable td {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+
+  .popup__head {
+    font-size: 14px;
+  }
+
+  .popup__count {
+    padding-left: 82px;
+  }
+
+  .popup__sum {
+    padding-right: 8px;
+  }
+
+  .popup__title {
+    font-size: 18px;
+  }
+
+  .popup__delete,
+  .popup__button {
+    font-size: 12px;
+  }
 }
