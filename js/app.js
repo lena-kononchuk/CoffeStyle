@@ -11,11 +11,11 @@ if (showBurgerMenu) {
 
 // close my burger menu here
 let els = document.querySelectorAll('.header__list');
-for( let i = els.length; i--; ) {
+for (let i = els.length; i--;) {
     els[i].addEventListener('click', function () {
-                document.body.classList.remove('_lock');
-                showBurgerMenu.classList.remove('_active');
-                menuList.classList.remove('_active');
+        document.body.classList.remove('_lock');
+        showBurgerMenu.classList.remove('_active');
+        menuList.classList.remove('_active');
     });
 }
 
@@ -47,13 +47,15 @@ function toggleSeeMore() {
     }
 }
 
+
+
 //PRODUCTS DATABASE 
 const db = [
     {
         id: 0,
         img: "images/Pink.png",
         name: "Pink Premium Ceramic",
-        description: "Классический рецепт: ,  Черный кофе (эспрессо или другой) – 30-50 мл,  Сливки (жирность 10-15%) – 100 мл,  Сахар – 5 грамм,  Ванильный сахар – 5 грамм,  Перец Чили,  Тертый шоколад – по вкусу (для украшения),",
+        description: "What's Included:, Tablespoon brown sugar, Shot of espresso(or 1 / 2 cup of strong brewed coffee), Cup of milk, Shot of Irish whiskey, Cup of heavy cream, Teaspoons of sugar(or to taste)",
         price: "$ 99.00",
         oldPrice: "",
         featured: false
@@ -62,7 +64,7 @@ const db = [
         id: 1,
         img: "images/Golden.png",
         name: "Golden Designers Mug",
-        description: "Классический рецепт: ,  Черный кофе (эспрессо или другой) – 30-50 мл,  Сливки (жирность 10-15%) – 100 мл,  Сахар – 5 грамм,  Ванильный сахар – 5 грамм,  Перец Чили,  Тертый шоколад – по вкусу (для украшения),",
+        description: "What's Included:, Tablespoon brown sugar, Shot of espresso(or 1 / 2 cup of strong brewed coffee), Cup of milk, Shot of Irish whiskey, Cup of heavy cream, Teaspoons of sugar(or to taste)",
         price: "$ 50.00",
         oldPrice: "$ 69.00",
         featured: false
@@ -71,7 +73,7 @@ const db = [
         id: 2,
         img: "images/redDes3.png",
         name: "Red Love Cup",
-        description: "Классический рецепт: ,  Черный кофе (эспрессо или другой) – 30-50 мл,  Сливки (жирность 10-15%) – 100 мл,  Сахар – 5 грамм,  Ванильный сахар – 5 грамм,  Перец Чили,  Тертый шоколад – по вкусу (для украшения),",
+        description: "What's Included:, Tablespoon brown sugar, Shot of espresso(or 1 / 2 cup of strong brewed coffee), Cup of milk, Shot of Irish whiskey, Cup of heavy cream, Teaspoons of sugar(or to taste)",
         price: "$ 25.00",
         oldPrice: "$ 37.00",
         featured: false
@@ -80,7 +82,7 @@ const db = [
         id: 3,
         img: "images/blackDes4.png",
         name: "Black Tea Cup",
-        description: "Классический рецепт:,  Черный кофе (эспрессо или другой) – 30-50 мл,  Сливки (жирность 10-15%) – 100 мл,  Сахар – 5 грамм,  Ванильный сахар – 5 грамм,  Перец Чили,  Тертый шоколад – по вкусу (для украшения),",
+        description: "What's Included:, Tablespoon brown sugar, Shot of espresso(or 1 / 2 cup of strong brewed coffee), Cup of milk, Shot of Irish whiskey, Cup of heavy cream, Teaspoons of sugar(or to taste)",
         price: "$ 15.00",
         oldPrice: "$ 29.00",
         featured: false
@@ -89,7 +91,7 @@ const db = [
         id: 4,
         img: "images/B&WDes5.png",
         name: "B&W Essentials Mug",
-        description: "Классический рецепт: ,  Черный кофе (эспрессо или другой) – 30-50 мл,  Сливки (жирность 10-15%) – 100 мл,  Сахар – 5 грамм,  Ванильный сахар – 5 грамм,  Перец Чили,  Тертый шоколад – по вкусу (для украшения),",
+        description: "What's Included:, Tablespoon brown sugar, Shot of espresso(or 1 / 2 cup of strong brewed coffee), Cup of milk, Shot of Irish whiskey, Cup of heavy cream, Teaspoons of sugar(or to taste)",
         price: "$ 19.00",
         oldPrice: "",
         featured: false
@@ -98,7 +100,7 @@ const db = [
         id: 5,
         img: "images/Winter.png",
         name: "Winter Style Mug",
-        description: "Классический рецепт: ,  Черный кофе (эспрессо или другой) – 30-50 мл,  Сливки (жирность 10-15%) – 100 мл,  Сахар – 5 грамм,  Ванильный сахар – 5 грамм,  Перец Чили,  Тертый шоколад – по вкусу (для украшения),",
+        description: "What's Included:, Tablespoon brown sugar, Shot of espresso(or 1 / 2 cup of strong brewed coffee), Cup of milk, Shot of Irish whiskey, Cup of heavy cream, Teaspoons of sugar(or to taste)",
         price: "$ 25.00",
         oldPrice: "",
         featured: false
@@ -107,7 +109,7 @@ const db = [
         id: 6,
         img: "images/Ceramic.png",
         name: "Ceramic Tea",
-        description: "Классический рецепт: ,  Черный кофе (эспрессо или другой) – 30-50 мл,  Сливки (жирность 10-15%) – 100 мл,  Сахар – 5 грамм,  Ванильный сахар – 5 грамм,  Перец Чили,  Тертый шоколад – по вкусу (для украшения),",
+        description: "What's Included:, Tablespoon brown sugar, Shot of espresso(or 1 / 2 cup of strong brewed coffee), Cup of milk, Shot of Irish whiskey, Cup of heavy cream, Teaspoons of sugar(or to taste)",
         price: "$ 46.00",
         oldPrice: "",
         featured: false
@@ -116,7 +118,7 @@ const db = [
         id: 7,
         img: "images/Handle.png",
         name: "No Handle Bar Cup",
-        description: "Классический рецепт: ,  Черный кофе (эспрессо или другой) – 30-50 мл,  Сливки (жирность 10-15%) – 100 мл,  Сахар – 5 грамм,  Ванильный сахар – 5 грамм,  Перец Чили,  Тертый шоколад – по вкусу (для украшения),",
+        description: "What's Included:, Tablespoon brown sugar, Shot of espresso(or 1 / 2 cup of strong brewed coffee), Cup of milk, Shot of Irish whiskey, Cup of heavy cream, Teaspoons of sugar(or to taste)",
         price: "$ 34.00",
         oldPrice: "",
         featured: false
@@ -125,7 +127,7 @@ const db = [
         id: 8,
         img: "images/EspressoDes6.png",
         name: "Espresso Cup by Mugs.co",
-        description: "Классический рецепт: ,  Черный кофе (эспрессо или другой) – 30-50 мл,  Сливки (жирность 10-15%) – 100 мл,  Сахар – 5 грамм,  Ванильный сахар – 5 грамм,  Перец Чили,  Тертый шоколад – по вкусу (для украшения),",
+        description: "What's Included:, Tablespoon brown sugar, Shot of espresso(or 1 / 2 cup of strong brewed coffee), Cup of milk, Shot of Irish whiskey, Cup of heavy cream, Teaspoons of sugar(or to taste)",
         price: "$ 25.00",
         oldPrice: "",
         featured: false
@@ -134,7 +136,7 @@ const db = [
         id: 9,
         img: "images/pinkDes7.png",
         name: "Pink Premium Ceramic",
-        description: "Классический рецепт: ,  Черный кофе (эспрессо или другой) – 30-50 мл,  Сливки (жирность 10-15%) – 100 мл,  Сахар – 5 грамм,  Ванильный сахар – 5 грамм,  Перец Чили,  Тертый шоколад – по вкусу (для украшения),",
+        description: "What's Included:, Tablespoon brown sugar, Shot of espresso(or 1 / 2 cup of strong brewed coffee), Cup of milk, Shot of Irish whiskey, Cup of heavy cream, Teaspoons of sugar(or to taste)",
         price: "$ 99.00",
         oldPrice: "",
         featured: false
@@ -143,7 +145,7 @@ const db = [
         id: 10,
         img: "images/summerDes8.png",
         name: "Summer Designer Cup",
-        description: "Классический рецепт: ,  Черный кофе (эспрессо или другой) – 30-50 мл,  Сливки (жирность 10-15%) – 100 мл,  Сахар – 5 грамм,  Ванильный сахар – 5 грамм,  Перец Чили,  Тертый шоколад – по вкусу (для украшения),",
+        description: "What's Included:, Tablespoon brown sugar, Shot of espresso(or 1 / 2 cup of strong brewed coffee), Cup of milk, Shot of Irish whiskey, Cup of heavy cream, Teaspoons of sugar(or to taste)",
         price: "$ 29.00",
         oldPrice: "",
         featured: false
@@ -476,7 +478,9 @@ cardRow.onclick = () => {
 
 
 
-
-
+// palallax for background: 
+window.addEventListener('scroll', e => {
+    document.body.style.cssText = `--scrollTop: ${this.scrollY}px`
+})
 
 

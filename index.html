@@ -9,7 +9,7 @@
 
 <body>
     <div class="wrapper">
-        <div class="header">
+        <header class="header">
             <div class="header__container">
                 <div class="header__row">
                     <a href="" class="header__logo">
@@ -30,7 +30,7 @@
                         <div class="header__coll" id="cardpopup">
                             <a href="" class="cart-header__icon _icon-cart"></a>
                             <div class="header__cartcount">0</div>
-                            <button id="buttontext" class="header__spantext">card</button>
+                            <button id="buttontext" class="header__spantext">cart</button>
                             <!-- <ul class="cart-header__list cart-list">
                             </ul> -->
                         </div>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
         <div class="main">
             <div class="content">
                 <div class="content__container">
@@ -133,8 +133,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="background">
-                    <img src="images/cookingBG.png" alt="background cooking">
+            </div>
+            <div class="background">
+                <div class="parallax__section">
+                    <div class="parallax__background"></div>
                 </div>
             </div>
             <div class="lifestyle" id="Style">
@@ -153,10 +155,6 @@
                                 <span class="lifestyle__date">October 9, 2018</span>
                             </div>
                         </div>
-
-                        <!-- заховати два lifestyle__block з 560px і відкрити функціею -->
-
-                        <!-- <span id="moreInfo"> -->
                         <div class="lifestyle__block">
                             <img src="images/design2.png" alt="lifestyle">
                             <div class="lifestyle__info">
@@ -193,7 +191,7 @@
                     <div class="updates__main">
                         <div class="updates__subtitle">Sign up and get free coffee bags</div>
                         <div class="updates__title">Coffee Updates</div>
-                        <form action="#" class="updates__form" autocomplete="off" method="get">
+                        <form action="" class="updates__form" autocomplete="off" method="get">
                             <label>
                                 <input class="updates__input" type="text" name="email"
                                     placeholder="customer@coffeestyle.io">
@@ -254,8 +252,7 @@
                 <div id="tableRow" class="popup__main">
                     <div class="popup__head">
                         <div class="popup__product">Product</div>
-                        <div class="popup__count">Count</div>
-                        <div class="popup__sum">Sum</div>
+
                     </div>
                 </div>
                 <div class="popup__order">
