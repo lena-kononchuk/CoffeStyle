@@ -616,11 +616,16 @@ body._lock {
     margin-right: 0;
   }
   .header__coll {
-    left: 111px;
+    left: 170px;
     margin-right: 0;
   }
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 640px) {
+  .header__coll {
+    left: 150px;
+  }
+}
+@media only screen and (max-width: 320px) {
   .header__logo {
     margin-left: 0;
   }
@@ -642,10 +647,10 @@ body._lock {
 }
 
 .content__row {
-  padding: 200px 0 100px 0;
+  padding: 200px 0 56px 0;
   background-image: url("../images/bg.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom;
   font-family: "Karla", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -736,7 +741,7 @@ body._lock {
     padding-bottom: 55px;
   }
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 320px) {
   .content {
     margin: 0;
   }
@@ -1285,6 +1290,7 @@ body._lock {
   background-color: #1d1f2e;
   padding: 15px 24px;
   border: none;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -1647,6 +1653,7 @@ body._lock {
   text-transform: uppercase;
   color: #000000;
   border: none;
+  cursor: pointer;
 }
 
 .updates__btn:hover {
