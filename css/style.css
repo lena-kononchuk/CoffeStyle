@@ -1636,6 +1636,7 @@ body._lock {
   text-transform: uppercase;
   color: #fff;
   border: 1px solid #2f303e;
+  outline: none;
 }
 
 .updates__form {
@@ -1705,6 +1706,10 @@ body._lock {
   font-style: normal;
   font-weight: normal;
   line-height: 18px;
+}
+
+.footer__logo img {
+  cursor: pointer;
 }
 
 .footer__logotext {
