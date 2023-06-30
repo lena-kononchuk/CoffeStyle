@@ -298,29 +298,34 @@ body._lock {
   }
 
   .header__coll {
-    left: 170px;
-    margin-right: 0;
+    left: 128px;
+    margin-right: 10px;
+    padding-right: 10px;
   }
-}
-
-@media only screen and (max-width: 550px) {
-  // .header__coll {
-  //   margin-right: 0;
-  // }
 }
 
 @media only screen and (max-width: 640px) {
   .header__coll {
-    left: 150px;
+    left: 130px;
+  }
+  .header__logo {
+    margin-left: 0;
+  }
+  .header__burger {
+    right: 0;
   }
 }
-
+@media only screen and (max-width: 550px) {
+  .header__coll {
+    left: 0px;
+  }
+}
 @media only screen and (max-width: 320px) {
   .header__logo {
     margin-left: 0;
   }
   .header__coll {
-    left: -20px;
+    // left: -20px;
     margin-right: 0;
   }
   .header__burger {
@@ -328,6 +333,9 @@ body._lock {
   }
   .header__list {
     padding-left: 0;
+  }
+  .header__coll {
+    left: 0px;
   }
 }
 
@@ -433,6 +441,9 @@ body._lock {
 @media only screen and (max-width: 500px) {
   .content__button {
     padding-bottom: 55px;
+  }
+  .content {
+    margin: 0;
   }
 }
 
@@ -714,7 +725,7 @@ body._lock {
   .featured__images .itemImage {
     margin-bottom: 10px;
 
-    max-width: 320px;
+    max-width: 280px;
   }
 
   .itemImage:hover {
@@ -742,15 +753,13 @@ body._lock {
   }
 }
 @media only screen and (max-width: 570px) {
-  // .featured__images .hiddenContainer {
-  //   bottom: 126px;
-  // }
-
   .paretPrice {
     margin-bottom: 55px;
     font-size: 13px;
   }
-
+  .featured__images .hiddenContainer {
+    bottom: 134px;
+  }
   .curentPrice {
     font-size: 13px;
   }
@@ -762,14 +771,19 @@ body._lock {
   .namePrice {
     font-size: 13px;
   }
-
+  .featured__images {
+    max-width: 350px;
+  }
   .featured__images .itemImage {
     margin-bottom: 23px;
   }
-
-  // .featured__images .hiddenContainer {
-  //   bottom: 117px;
-  // }
+  .featured__row {
+    // justify-content: space-evenly;
+    // flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -1367,7 +1381,8 @@ body._lock {
 
 .updates__input {
   padding: 20px;
-  min-width: 350px;
+  max-width: 350px;
+  width: 100%;
   background-color: initial;
   font-size: 12px;
   line-height: 18px;
@@ -1408,6 +1423,7 @@ body._lock {
   }
 
   .updates__input {
+    max-width: 238px;
     width: 100%;
   }
 
@@ -1430,6 +1446,10 @@ body._lock {
   }
   .updates__title {
     font-size: 33px;
+  }
+  .updates__input {
+    max-width: 238px;
+    width: 100%;
   }
 }
 
